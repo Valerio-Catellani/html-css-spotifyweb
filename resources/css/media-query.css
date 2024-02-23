@@ -23,3 +23,32 @@
 @media all and (max-width: 768px) {}
 
 @media all and (max-width: 576px) {} */
+
+@media screen and (max-width: 1200px) {
+
+  .playlists,
+  .playlists-container ul {
+    flex-wrap: wrap;
+  }
+
+  .single-playlist {
+    width: calc((100% - 60px) / 4);
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+
+  .single-playlist {
+    width: calc((100% - 20px) / 2);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .single-playlist {
+    width: 100%;
+    padding-top: 50px
+  }
+}

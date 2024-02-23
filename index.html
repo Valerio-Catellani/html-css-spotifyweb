@@ -22,7 +22,7 @@
 <body>
   <div id="app">
     <div id="main-content">
-      <nav class="display-flex flex-direction-column justify-content-space-between">
+      <nav class="bg-color-nav-background display-flex flex-direction-column justify-content-space-between">
         <div class="nav-top">
           <p>logo</p>
           <p>logo2</p>
@@ -48,16 +48,20 @@
         <div class="nav-bottom">"questo div va un basso"
         </div>
       </nav>
-      <div id="content" class="overflow-y-auto padding-top80">
-        <div id="transparent-bar"></div>
-        <div class="playlists-container">
-          <ul class="text-transform-uppercase display-flex justify-content-center">
-            <li> <a href="www.google.it">in evidenza</a></li>
-            <li> <a href="www.google.it">podcast</a></li>
-            <li> <a href="www.google.it">classifiche</a></li>
-            <li> <a href="www.google.it">generi e mod</a></li>
-            <li> <a href="www.google.it">nuove uscite</a></li>
-            <li> <a href="www.google.it">scopri</a></li>
+      <div id="content" class="bg-color-content-background overflow-y-auto padding-top80 text-color-primary">
+        <div id="transparent-bar" class=" display-flex align-items-center justify-content-flex-end">
+          <h3 class="upgrade text-transform-uppercase pointer">effettual l'upgrade</h3>
+        </div>
+        <div class="playlists-container padding-20">
+          <ul class="text-transform-uppercase display-flex justify-content-center text-color-text-not-highlighted">
+            <li><a class="highlighted" href="www.google.it">in evidenza<div class="green-bar"></div></a>
+
+            </li>
+            <li><a class="highlighted" href="www.google.it">podcast <div class="green-bar"></div> </a></li>
+            <li><a class="highlighted" href="www.google.it">classifiche <div class="green-bar"></div> </a></li>
+            <li><a class="highlighted" href="www.google.it">generi e mod <div class="green-bar"></div> </a></li>
+            <li><a class="highlighted" href="www.google.it">nuove uscite <div class="green-bar"></div> </a></li>
+            <li><a class="highlighted" href="www.google.it">scopri <div class="green-bar"></div> </a></li>
           </ul>
 
           <section class="recent-playlist">
@@ -66,13 +70,16 @@
               <div class="single-playlist text-align-center">
                 <div class="playlist-img-container">
                   <img src="resources/img/metal_lifting.jpg" alt="Heavy Metal">
+                  <div class="play-hover "><i class="fa-regular fa-circle-play"></i></div>
                 </div>
                 <h3>Heavy Metal</h3>
                 <p>subtitle</p>
               </div>
+
               <div class="single-playlist text-align-center">
                 <div class="playlist-img-container">
                   <img src="resources/img/stranger.jpeg" alt="Stranger Things">
+                  <div class="play-hover "><i class="fa-regular fa-circle-play"></i></div>
                 </div>
                 <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)</h3>
                 <p>Dle Dixon &amp; Michael Stein</p>
@@ -80,6 +87,7 @@
               <div class="single-playlist text-align-center">
                 <div class="playlist-img-container">
                   <img src="resources/img/aquietplace.jpeg" alt="A quiet place">
+                  <div class="play-hover "><i class="fa-regular fa-circle-play"></i></div>
                 </div>
                 <h3>A Quiet Place</h3>
                 <p>subtitle</p>
@@ -87,6 +95,7 @@
               <div class="single-playlist text-align-center">
                 <div class="playlist-img-container">
                   <img src="resources/img/split.jpeg" alt="Split">
+                  <div class="play-hover "><i class="fa-regular fa-circle-play"></i></div>
                 </div>
                 <h3>Split</h3>
                 <p>subtitle</p>
@@ -94,6 +103,7 @@
               <div class="single-playlist text-align-center">
                 <div class="playlist-img-container">
                   <img src="resources/img/cure.jpeg" alt="A cure for wellness">
+                  <div class="play-hover "><i class="fa-regular fa-circle-play"></i></div>
                 </div>
                 <h3>A cure for wellness</h3>
                 <p>subtitle</p>
@@ -101,6 +111,7 @@
               <div class="single-playlist text-align-center">
                 <div class="playlist-img-container">
                   <img src="resources/img/sinister.jpeg" alt="sinister">
+                  <div class="play-hover "><i class="fa-regular fa-circle-play"></i></div>
                 </div>
                 <h3>Sinister</h3>
                 <p>subtitle</p>
@@ -115,12 +126,14 @@
               <div class="single-playlist text-align-center">
                 <div class="playlist-img-container">
                   <img src="resources/img/radar.jpeg" alt="Release rader">
+                  <div class="play-hover "><i class="fa-regular fa-circle-play"></i></div>
                 </div>
                 <h3>Release rader</h3>
               </div>
               <div class="single-playlist text-align-center">
                 <div class="playlist-img-container">
                   <img src="resources/img/mixdaily.jpeg" alt="Daily Mix 1">
+                  <div class="play-hover "><i class="fa-regular fa-circle-play"></i></div>
                 </div>
                 <h3>Daily Mix 1</h3>
               </div>
@@ -134,12 +147,14 @@
               <div class="single-playlist text-align-center">
                 <div class="playlist-img-container cicle-container">
                   <img class="circle-img" src="resources/img/youg.jpeg" alt="Lana del Rey">
+                  <div class="play-hover "><i class="fa-regular fa-circle-play"></i></div>
                 </div>
                 <h3>Lana del Rey</h3>
               </div>
               <div class="single-playlist text-align-center">
                 <div class="playlist-img-container cicle-container">
                   <img class="circle-img" src="resources/img/einaudi.jpeg" alt="Ludovico Einaudi">
+                  <div class="play-hover "><i class="fa-regular fa-circle-play"></i></div>
                 </div>
                 <h3>Ludovico Einaudi</h3>
               </div>
@@ -150,7 +165,7 @@
       </div>
     </div>
     <div>
-      <div id="toolbar">
+      <div id="toolbar" class="bg-color-toolbar-background">
         toolbar
       </div>
     </div>

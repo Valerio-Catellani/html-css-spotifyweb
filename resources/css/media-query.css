@@ -51,4 +51,47 @@
     width: 100%;
     padding-top: 50px
   }
+
+  header {
+    width: 60px;
+  }
+
+  #content {
+    width: calc(100% - 60px);
+  }
+
+  #transparent-bar {
+    width: calc(100% - 60px);
+  }
+
+  header .header-top li,
+  header .header-bottom .download,
+  header .header-bottom .profile {
+    justify-content: center;
+  }
+
+  .header-icon {
+    margin: 0;
+  }
+
+  header img,
+  header .header-playlists,
+  header .header-bottom {
+    padding: 10px;
+  }
+
+  header span,
+  header .header-playlists,
+  header .header-top .big-logo,
+  .green-bar-y {
+    display: none;
+  }
+
+  header .header-top .small-logo {
+    display: block;
+  }
+
+  header .header-bottom .download {
+    border-bottom: none;
+  }
 }

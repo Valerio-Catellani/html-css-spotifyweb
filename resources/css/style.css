@@ -130,6 +130,30 @@ header {
   width: 200px;
   height: 100%;
   font-weight: bold;
+  font-size: 0.8em;
+}
+
+header img,
+header .header-playlists,
+header .header-bottom {
+  padding: 20px
+}
+
+header li {
+  padding: 2px 0;
+}
+
+
+header .header-playlists li,
+.profile,
+.download {
+  padding: 8px 0;
+}
+
+/*header-top*/
+
+.big-logo {
+  width: 80%;
 }
 
 .plus {
@@ -152,14 +176,6 @@ header {
   fill: var(--color-text-not-highlighted)
 }
 
-header li:hover .plus {
-  background-color: var(--color-primary);
-}
-
-header li:hover .header-icon path {
-  fill: var(--color-primary);
-}
-
 .download {
   border-bottom: var(--color-text-not-highlighted) 1px solid;
 }
@@ -168,9 +184,33 @@ header li:hover .header-icon path {
   width: 20px;
 }
 
+.green-bar-y {
+  display: inline-block;
+  width: 5px;
+  margin-right: 15px;
+  align-self: stretch;
+  background-color: var(--color-text-underscore);
+  opacity: 0;
+}
+
+header .header-top>ul li:hover .green-bar-y {
+  transition: 0.5s;
+  opacity: 1;
+}
+
+/*header-bottom*/
 .profile .header-icon {
   width: 25px;
   background-color: white
+}
+
+header li:hover .header-icon path,
+header .header-bottom .download:hover .header-icon path {
+  fill: var(--color-primary);
+}
+
+header li:hover .plus {
+  background-color: var(--color-primary);
 }
 
 
@@ -217,7 +257,7 @@ header li:hover .header-icon path {
   padding: 10px 20px;
 }
 
-#content ul li a:hover .green-bar {
+#content ul li a:hover .green-bar-x {
   opacity: 1;
   transition: 0.3s;
 }
@@ -272,7 +312,7 @@ section {
 }
 
 
-.green-bar {
+.green-bar-x {
   height: 2px;
   width: 50%;
   margin: 0 auto;

@@ -14,6 +14,21 @@ img {
   height: 100vh
 }
 
+/*UTILITY*/
+
+.cicle-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.circle-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 
 
 /******MAIN CONTENT****/
@@ -47,6 +62,11 @@ nav {
 #content {
   width: calc(100% - 200px);
   position: relative;
+}
+
+.single-playlist {
+  width: calc((100% - 100px) / 6);
+
 }
 
 /*TOOLBAR*/

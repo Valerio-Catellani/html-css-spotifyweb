@@ -410,6 +410,10 @@ html {
   text-decoration: underline;
 }
 
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
 
 
 /*********************** DISPLAY **********************/

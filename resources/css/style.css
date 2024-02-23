@@ -119,7 +119,7 @@ a {
 /******MAIN CONTENT****/
 
 #main-content {
-  height: calc(100vh - 80px);
+  height: calc(100vh - 95px);
   display: flex;
 }
 
@@ -323,5 +323,78 @@ section {
 /*TOOLBAR*/
 
 #toolbar {
-  height: 80px;
+  height: 95px;
+  padding: 15px;
+}
+
+#toolbar .add-to-favorites {
+  padding: 0 20px;
+}
+
+#toolbar .track-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+#toolbar i {
+  margin: 10px;
+  cursor: pointer;
+}
+
+#toolbar .toolbar-center {
+  padding-bottom: 20px;
+}
+
+.progress,
+.volume-bar-x {
+  height: 4px;
+  border-radius: 10px;
+  margin: 0 10px;
+  background-color: var(--color-text-not-highlighted);
+  cursor: pointer;
+  background: var(--color-text-not-highlighted);
+}
+
+.progress {
+  width: 40vw;
+}
+
+.volume-bar-x {
+  width: 10vw;
+}
+
+.vertical-volume-container {
+  position: absolute;
+  left: 0;
+  bottom: 15px;
+  height: 0%;
+  width: 20px;
+  background-color: var(--color-toolbar-background);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.volume-bar-y {
+  height: calc(100% - 10px);
+  margin: 5px auto;
+  background-color: var(--color-text-not-highlighted);
+  width: 4px;
+}
+
+#toolbar .toolbar-right .fa-volume-high:hover .vertical-volume-container {
+  animation: open-menu;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes open-menu {
+  0% {
+    height: 0px;
+  }
+
+  100% {
+    height: 100px;
+  }
+
 }

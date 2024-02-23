@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="resources/css/style.css">
   <link rel="stylesheet" href="resources/css/animation.css">
   <link rel="stylesheet" href="resources/css/media-query.css">
-  <title>Document</title>
+  <title>Spotify-Boolean</title>
 </head>
 
 <body>
@@ -210,15 +210,47 @@
       </div>
     </div>
 
-    <div id="toolbar" class="bg-color-toolbar-background">
-      <div class="toolbar-right">
+    <div id="toolbar" class="bg-color-toolbar-background display-flex justify-content-space-between align-items-center">
+      <div class="toolbar-left display-flex align-items-center">
+        <div class="track display-flex align-items-center">
+          <div class="track-img img-container">
+            <img src="resources/img/sinister.jpeg" alt="Sinister song">
+          </div>
+          <div class="song-information font-size-em-75">
+            <h4 class="text-color-primary">Sinister</h4>
+            <p><a class="hover-underline highlighted" href="www.google.it">Brano Nome</a></p>
+          </div>
 
+        </div>
+        <div class="add-to-favorites display-flex">
+          <i class="fa-regular fa-heart highlighted"></i>
+          <i class="fa-regular fa-folder-open highlighted"></i>
+        </div>
       </div>
-      <div class="toolbar-center">
-
+      <div class="toolbar-center display-flex flex-direction-column align-items-center text-color-primary">
+        <div class="toolbar-center-top display-flex align-items-center">
+          <i class="fa-solid fa-shuffle"></i>
+          <i class="fa-solid fa-backward-step"></i>
+          <i class="fa-regular fa-circle-play font-size-em-200"></i>
+          <i class="fa-solid fa-forward-step"></i>
+          <i class="fa-solid fa-rotate-right"></i>
+        </div>
+        <div class="toolbar-center-bottom display-flex align-items-center">
+          <div class="time font-size-em-75">0:25</div>
+          <div class="progress"></div>
+          <div class="duration font-size-em-75">4:35</div>
+        </div>
       </div>
-      <div class="toolbar-left">
 
+      <div class="toolbar-right display-flex align-items-center text-color-primary">
+        <i class="fa-solid fa-list-ul"></i>
+        <i class="fa-solid fa-desktop"></i>
+        <i class="fa-solid fa-volume-high position-relative">
+          <div class="vertical-volume-container display-none">
+            <div class="volume-bar-y"></div>
+          </div>
+        </i>
+        <div class="volume-bar-x"></div>
       </div>
     </div>
   </div>

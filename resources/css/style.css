@@ -97,7 +97,7 @@ a {
 
 /*UTILITY*/
 
-.cicle-container {
+.circle-container {
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
@@ -112,9 +112,9 @@ a {
 }
 
 .highlighted:hover {
-  color: var(--color-text-highlighted)
+  color: var(--color-text-highlighted);
+  cursor: pointer
 }
-
 
 /******MAIN CONTENT****/
 
@@ -124,12 +124,56 @@ a {
 }
 
 
-/*NAV*/
+/*header*/
 
-nav {
+header {
   width: 200px;
   height: 100%;
+  font-weight: bold;
 }
+
+.plus {
+  font-size: 2em;
+  width: 35px;
+  height: 35px;
+  background-color: var(--color-new-playlists);
+  line-height: 35px;
+  color: var(--color-nav-background);
+  border-radius: 1px;
+  margin-right: 10px;
+}
+
+.header-icon {
+  width: 35px;
+  margin-right: 5px;
+}
+
+.header-icon path {
+  fill: var(--color-text-not-highlighted)
+}
+
+header li:hover .plus {
+  background-color: var(--color-primary);
+}
+
+header li:hover .header-icon path {
+  fill: var(--color-primary);
+}
+
+.download {
+  border-bottom: var(--color-text-not-highlighted) 1px solid;
+}
+
+.download .header-icon {
+  width: 20px;
+}
+
+.profile .header-icon {
+  width: 25px;
+  background-color: white
+}
+
+
 
 /****CONTENT*****/
 
@@ -162,7 +206,6 @@ nav {
   padding: 15px 50px;
   margin: 0 40px;
 }
-
 
 
 /*plalistis + ul*/

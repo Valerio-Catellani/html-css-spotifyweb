@@ -9,6 +9,7 @@
   --color-text-highlighted: #d2d2d2;
   --color-new-playlists: #a3a3a3;
   --color-text-underscore: #adff2f;
+  --color-big-light-blue: #4d767d;
 }
 
 .text-color-content-background {
@@ -133,14 +134,10 @@ header {
   font-size: 0.8em;
 }
 
-header img,
+header #logo,
 header .header-playlists,
 header .header-bottom {
   padding: 20px
-}
-
-header li {
-  padding: 2px 0;
 }
 
 
@@ -152,8 +149,14 @@ header .header-playlists li,
 
 /*header-top*/
 
-.big-logo {
+
+#logo {
   width: 80%;
+}
+
+header .header-top>ul li {
+  padding: 5px 20px;
+
 }
 
 .plus {
@@ -184,18 +187,10 @@ header .header-playlists li,
   width: 20px;
 }
 
-.green-bar-y {
-  display: inline-block;
-  width: 5px;
-  margin-right: 15px;
-  align-self: stretch;
-  background-color: var(--color-text-underscore);
-  opacity: 0;
-}
 
-header .header-top>ul li:hover .green-bar-y {
-  transition: 0.5s;
-  opacity: 1;
+header .header-top>ul li:hover {
+  padding: 5px 15px;
+  border-left: var(--color-text-underscore) solid 5px;
 }
 
 /*header-bottom*/
@@ -222,8 +217,8 @@ header li:hover .plus {
   position: relative;
 }
 
-/*transparent-bar*/
-#transparent-bar {
+/*upgrade-banner*/
+#upgrade-banner {
   top: 0;
   height: 70px;
   width: calc(100% - 200px);
@@ -232,7 +227,7 @@ header li:hover .plus {
   background-color: rgb(0, 0, 0, 0.5);
 }
 
-#transparent-bar .upgrade {
+#upgrade-banner .upgrade {
   margin: 0 50px;
   font-size: 0.7em;
   color: var(--color-primary);
@@ -241,7 +236,7 @@ header li:hover .plus {
   border-radius: 50px;
 }
 
-#transparent-bar .upgrade:hover {
+#upgrade-banner .upgrade:hover {
   font-size: 0.8em;
   padding: 15px 50px;
   margin: 0 40px;
@@ -347,13 +342,13 @@ section {
 }
 
 .progress,
+.active-progress,
 .volume-bar-x {
   height: 4px;
   border-radius: 10px;
   margin: 0 10px;
   background-color: var(--color-text-not-highlighted);
   cursor: pointer;
-  background: var(--color-text-not-highlighted);
 }
 
 .progress {
@@ -388,13 +383,109 @@ section {
   animation-fill-mode: forwards;
 }
 
-@keyframes open-menu {
-  0% {
-    height: 0px;
-  }
 
-  100% {
-    height: 100px;
-  }
+/*HOVER TOOLBAR*/
 
+
+/*progress hover*/
+#toolbar .play-bar-hover {
+  position: absolute;
+  align-items: center;
+  width: 40vw;
+  left: 0;
+  top: -7px
+}
+
+#toolbar .play-bar-hover i,
+#toolbar .audio-bar-hover i {
+  margin: 0;
+}
+
+#toolbar .play-bar-active {
+  width: 4vw;
+  background-color: #adff2f;
+  height: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#toolbar .progress:hover .play-bar-hover,
+#toolbar .volume-bar-x:hover .audio-bar-hover {
+  display: flex;
+}
+
+/*audio*/
+#toolbar .audio-bar-hover {
+  position: absolute;
+  align-items: center;
+  width: 10vw;
+  left: 0;
+  top: -7px
+}
+
+.audio-bar-active {
+  width: 1vw;
+  background-color: #adff2f;
+  height: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+/***************************************LIBRARY***************************************/
+
+/**/
+#library #content {
+  background-image: linear-gradient(var(--color-big-light-blue), rgba(0, 0, 0));
+}
+
+#library #active-song .img-container {
+  box-shadow: #333232 5px 5px 50px 3px;
+  margin: 20px 40px;
+}
+
+#library #active-song .song-information {
+  width: 50%;
+  margin: 20px;
+  padding: 0 5px;
+}
+
+#library #active-song h2 {
+  font-size: 7em;
+  padding: 0
+}
+
+#library #active-song .likes {
+  padding: 10px 0;
+}
+
+#library #active-song .small-logo-container {
+  width: 30px;
+}
+
+/*table*/
+
+#library table {
+  text-align: left;
+  border-spacing: 0 20px;
+  border-collapse: collapse;
+}
+
+#library table thead {
+  padding: 10px;
+  border-bottom: #000000 1px solid;
+}
+
+
+#library table tr {
+  padding: 30px;
+}
+
+#library .small-img-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-right: 15px;
 }

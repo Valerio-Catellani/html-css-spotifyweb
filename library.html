@@ -103,7 +103,7 @@
             <img src="resources/img/metal_lifting.jpg" alt="metal lifiting song image">
           </div>
           <div class="song-information">
-            <h6>playlist</h6>
+            <h6 class="font-size-em-150">playlist</h6>
             <h2>Metal Lifting</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, illum voluptas. Animi fugiat molestias
               nostrum voluptatibus minima ratione, facilis libero.</p>
@@ -118,48 +118,239 @@
             </div>
           </div>
         </section>
-        <div>barra</div>
+        <section id="playlist-command" class="display-flex align-items-center justify-content-space-between">
+          <div>
+            <i class="fa-solid fa-play pointer"></i>
+            <i class="fa-regular fa-heart pointer"></i>
+            <i class="fa-solid fa-ellipsis pointer"></i>
+          </div>
+          <div>
+            <span>Elenco</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+
+        </section>
         <section id="active-playlist">
           <table class="width-100x100">
             <thead>
               <tr>
                 <th class="text-align-center">&#35;</th>
-                <th class="width-30x100">Titolo</th>
-                <th class="width-30x100">Album</th>
+                <th class="width-40x100">Titolo</th>
+                <th class="width-25x100">Album</th>
                 <th>Aggiunto il giorno</th>
                 <th class="text-align-center"><i class="fa-regular fa-clock"></i></th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="text-align-center">1</td>
-                <td class="display-flex align-items-center">
-                  <div class="small-img-container">
-                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
-                  </div>
-                  <div class="small-info">
-                    <h4>Metal Lifting</h4>
-                    <p class="text-color-text-not-highlighted">Lucas Estrada, TWOPILOTES</p>
-                  </div>
-                </td>
-                <td>Bloom</td>
-                <td>27 Novembre</td>
-                <td class="text-align-center">2:59</td>
+              <tr class="fix-height">
+                <td></td>
               </tr>
               <tr>
-                <td class="text-align-center">1</td>
+                <td><span>1</span>
+                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
+                </td>
                 <td class="display-flex align-items-center">
                   <div class="small-img-container">
                     <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
                   </div>
                   <div class="small-info">
                     <h4>Metal Lifting</h4>
-                    <p class="text-color-text-not-highlighted">Lucas Estrada, TWOPILOTES</p>
+                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    &#44;
+                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
                   </div>
                 </td>
-                <td>Bloom</td>
-                <td>27 Novembre</td>
-                <td class="text-align-center">2:59</td>
+                <td class="hover-underline pointer">Bloom</td>
+                <td class="text-color-text-not-highlighted">27 Novembre</td>
+                <td class="text-align-center">
+                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <span>2:59</span>
+                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>2</span>
+                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
+                </td>
+                <td class="display-flex align-items-center">
+                  <div class="small-img-container">
+                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
+                  </div>
+                  <div class="small-info">
+                    <h4>Metal Lifting</h4>
+                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    &#44;
+                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                  </div>
+                </td>
+                <td class="hover-underline pointer">Bloom</td>
+                <td class="text-color-text-not-highlighted">27 Novembre</td>
+                <td class="text-align-center">
+                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <span>2:59</span>
+                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>3</span>
+                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
+                </td>
+                <td class="display-flex align-items-center">
+                  <div class="small-img-container">
+                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
+                  </div>
+                  <div class="small-info">
+                    <h4>Metal Lifting</h4>
+                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    &#44;
+                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                  </div>
+                </td>
+                <td class="hover-underline pointer">Bloom</td>
+                <td class="text-color-text-not-highlighted">27 Novembre</td>
+                <td class="text-align-center">
+                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <span>2:59</span>
+                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>4</span>
+                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
+                </td>
+                <td class="display-flex align-items-center">
+                  <div class="small-img-container">
+                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
+                  </div>
+                  <div class="small-info">
+                    <h4>Metal Lifting</h4>
+                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    &#44;
+                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                  </div>
+                </td>
+                <td class="hover-underline pointer">Bloom</td>
+                <td class="text-color-text-not-highlighted">27 Novembre</td>
+                <td class="text-align-center">
+                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <span>2:59</span>
+                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>5</span>
+                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
+                </td>
+                <td class="display-flex align-items-center">
+                  <div class="small-img-container">
+                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
+                  </div>
+                  <div class="small-info">
+                    <h4>Metal Lifting</h4>
+                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    &#44;
+                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                  </div>
+                </td>
+                <td class="hover-underline pointer">Bloom</td>
+                <td class="text-color-text-not-highlighted">27 Novembre</td>
+                <td class="text-align-center">
+                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <span>2:59</span>
+                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>6</span>
+                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
+                </td>
+                <td class="display-flex align-items-center">
+                  <div class="small-img-container">
+                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
+                  </div>
+                  <div class="small-info">
+                    <h4>Metal Lifting</h4>
+                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    &#44;
+                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                  </div>
+                </td>
+                <td class="hover-underline pointer">Bloom</td>
+                <td class="text-color-text-not-highlighted">27 Novembre</td>
+                <td class="text-align-center">
+                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <span>2:59</span>
+                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>7</span>
+                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
+                </td>
+                <td class="display-flex align-items-center">
+                  <div class="small-img-container">
+                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
+                  </div>
+                  <div class="small-info">
+                    <h4>Metal Lifting</h4>
+                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    &#44;
+                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                  </div>
+                </td>
+                <td class="hover-underline pointer">Bloom</td>
+                <td class="text-color-text-not-highlighted">27 Novembre</td>
+                <td class="text-align-center">
+                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <span>2:59</span>
+                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>8</span>
+                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
+                </td>
+                <td class="display-flex align-items-center">
+                  <div class="small-img-container">
+                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
+                  </div>
+                  <div class="small-info">
+                    <h4>Metal Lifting</h4>
+                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    &#44;
+                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                  </div>
+                </td>
+                <td class="hover-underline pointer">Bloom</td>
+                <td class="text-color-text-not-highlighted">27 Novembre</td>
+                <td class="text-align-center">
+                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <span>2:59</span>
+                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>9</span>
+                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
+                </td>
+                <td class="display-flex align-items-center">
+                  <div class="small-img-container">
+                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
+                  </div>
+                  <div class="small-info">
+                    <h4>Metal Lifting</h4>
+                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    &#44;
+                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                  </div>
+                </td>
+                <td class="hover-underline pointer">Bloom</td>
+                <td class="text-color-text-not-highlighted">27 Novembre</td>
+                <td class="text-align-center">
+                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <span>2:59</span>
+                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                </td>
               </tr>
             </tbody>
 
@@ -187,7 +378,7 @@
         </div>
       </div>
       <div class="toolbar-center display-flex flex-direction-column align-items-center text-color-primary">
-        <div class="toolbar-center-top display-flex align-items-center">
+        <div class="toolbar-center-top display-flex align-items-center justify-content-space-between gap-10">
           <i class="fa-solid fa-shuffle"></i>
           <i class="fa-solid fa-backward-step"></i>
           <i class="fa-regular fa-circle-play font-size-em-200">

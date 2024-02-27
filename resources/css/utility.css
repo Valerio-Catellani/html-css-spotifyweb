@@ -160,6 +160,14 @@ html {
   min-width: 100px;
 }
 
+.min-height-0 {
+  min-height: 0px;
+}
+
+.min-width-0 {
+  min-width: 0px;
+}
+
 /*** Scales ****/
 
 .aspect-ratio-1-1 {
@@ -191,6 +199,10 @@ html {
   width: 80%;
 }
 
+.width-75x100 {
+  width: 25%;
+}
+
 .width-70x100 {
   width: 70%;
 }
@@ -209,6 +221,10 @@ html {
 
 .width-30x100 {
   width: 30%;
+}
+
+.width-25x100 {
+  width: 25%;
 }
 
 .width-20x100 {

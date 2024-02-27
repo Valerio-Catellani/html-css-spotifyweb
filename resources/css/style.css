@@ -135,11 +135,14 @@ header {
 }
 
 header #logo,
-header .header-playlists,
-header .header-bottom {
+header .header-playlists {
   padding: 20px
 }
 
+header .header-bottom {
+  padding: 0 20px;
+  margin: 10px 0;
+}
 
 header .header-playlists li,
 .profile,
@@ -149,6 +152,9 @@ header .header-playlists li,
 
 /*header-top*/
 
+.header-top {
+  height: calc(100% - 80px);
+}
 
 #logo {
   width: 80%;
@@ -194,7 +200,11 @@ header .header-top>ul li:hover {
 }
 
 /*header-bottom*/
-.profile .header-icon {
+.header-bottom {
+  height: 80px
+}
+
+header .profile .header-icon {
   width: 25px;
   background-color: white
 }
@@ -341,9 +351,9 @@ section {
   padding-bottom: 20px;
 }
 
-.progress,
-.active-progress,
-.volume-bar-x {
+#toolbar .progress,
+#toolbar .active-progress,
+#toolbar .volume-bar-x {
   height: 4px;
   border-radius: 10px;
   margin: 0 10px;
@@ -351,15 +361,15 @@ section {
   cursor: pointer;
 }
 
-.progress {
+#toolbar .progress {
   width: 40vw;
 }
 
-.volume-bar-x {
+#toolbar .volume-bar-x {
   width: 10vw;
 }
 
-.vertical-volume-container {
+#toolbar .vertical-volume-container {
   position: absolute;
   left: 0;
   bottom: 15px;
@@ -423,7 +433,7 @@ section {
   top: -7px
 }
 
-.audio-bar-active {
+#toolbar .audio-bar-active {
   width: 1vw;
   background-color: #adff2f;
   height: 4px;
@@ -431,9 +441,17 @@ section {
   cursor: pointer;
 }
 
+#toolbar .toolbar-center-top .fa-circle-play:hover {
+  flex-grow: 1;
+  flex-shrink: 0;
+}
 
 
 /***************************************LIBRARY***************************************/
+
+#library section {
+  padding: 40px 20px;
+}
 
 /**/
 #library #content {
@@ -452,7 +470,7 @@ section {
 }
 
 #library #active-song h2 {
-  font-size: 7em;
+  font-size: 5em;
   padding: 0
 }
 
@@ -468,23 +486,62 @@ section {
 
 #library table {
   text-align: left;
-  border-spacing: 0 20px;
-  border-collapse: collapse;
-}
-
-#library table thead {
-  padding: 10px;
-  border-bottom: #000000 1px solid;
+  border-spacing: 0;
+  border-collapse: separate;
 }
 
 
-#library table tr {
-  padding: 30px;
+#library table tbody tr td,
+#library table thead tr th {
+  padding: 10px 0;
+}
+
+
+#library table thead tr th {
+  border-bottom: var(--color-text-not-highlighted) solid 1px;
+}
+
+#library table tbody tr:first-child td {
+  padding-top: 20px;
+}
+
+#library table tbody tr td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 10px;
+}
+
+#library table tbody tr td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-right: 10px;
+}
+
+
+#library table tbody tr:not(.fix-height):hover {
+  background-color: rgba(112, 109, 109, 0.5);
+}
+
+#library table tbody tr:hover p,
+#library table tbody tr td:last-child .fa-heart:hover,
+#library table tbody tr td:last-child .fa-ellipsis:hover {
+  color: var(--color-primary);
+}
+
+#library table tbody tr:hover td:first-child span {
+  display: none;
+}
+
+#library table tbody tr:hover td:first-child .fa-play,
+#library table tbody tr:hover td:last-child .fa-heart,
+#library table tbody tr:hover td:last-child .fa-ellipsis {
+  opacity: 1;
+  display: inline;
 }
 
 #library .small-img-container {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 5px;
   overflow: hidden;
   margin-right: 15px;

@@ -55,9 +55,9 @@
               <span><a href="library.html">la tua libreria</a></span>
             </li>
           </ul>
-          <div class="header-playlists">
+          <div class="header-playlists min-height-0 display-flex flex-direction-column">
             <h3 class="text-transform-uppercase text-color-primary">playlist</h3>
-            <ul>
+            <ul class="height-100x100 overflow-y-auto">
               <li class="display-flex align-items-center highlighted">
                 <div class="plus text-align-center">+</div>
                 <span>Crea playlist</span>
@@ -72,7 +72,7 @@
             </ul>
           </div>
         </div>
-        <div class="header-bottom">
+        <div class="header-bottom bg-color-nav-background">
           <div class="download display-flex align-items-center highlighted">
             <svg class="header-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <title>Download icon</title>
@@ -228,7 +228,7 @@
         </div>
       </div>
       <div class="toolbar-center display-flex flex-direction-column align-items-center text-color-primary">
-        <div class="toolbar-center-top display-flex align-items-center">
+        <div class="toolbar-center-top display-flex align-items-center justify-content-space-between gap-10">
           <i class="fa-solid fa-shuffle"></i>
           <i class="fa-solid fa-backward-step"></i>
           <i class="fa-regular fa-circle-play font-size-em-200">
@@ -236,7 +236,7 @@
           <i class="fa-solid fa-forward-step"></i>
           <i class="fa-solid fa-rotate-right"></i>
         </div>
-        <div class="toolbar-center-bottom display-flex align-items-center">
+        <div class="toolbar-center-bottom display-flex align-items-center ">
           <div class="time font-size-em-75">0:25</div>
           <div class="progress position-relative">
             <div class="play-bar-hover display-none">

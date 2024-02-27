@@ -141,7 +141,7 @@
 }
 
 @media screen and (max-height: 576px) {
-  #transparent-bar {
+  #upgrade-banner {
     display: none;
   }
 

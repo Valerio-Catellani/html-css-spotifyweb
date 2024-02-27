@@ -34,6 +34,15 @@
   .single-playlist {
     width: calc((100% - 60px) / 4);
   }
+
+  /*Library <1200px*/
+  #library #active-song h2 {
+    font-size: 2.8em;
+  }
+
+  #library #active-song .song-animation {
+    display: none;
+  }
 }
 
 
@@ -55,6 +64,23 @@
   #toolbar .vertical-volume-container {
     display: block;
   }
+
+  /*Library <992px*/
+  #library #active-song .song-information p,
+  #library #active-song .song-information .likes .small-logo-container,
+  #library table tbody tr td:nth-child(4),
+  #library table thead tr th:nth-child(4) {
+    display: none;
+  }
+
+  #library #active-song .song-information:not(h2) {
+    font-size: 0.65em;
+  }
+
+  #library #active-song h2 {
+    font-size: 1.75rem;
+  }
+
 }
 
 
@@ -78,7 +104,7 @@
     width: calc(100% - 60px);
   }
 
-  #transparent-bar {
+  #upgrade-banner {
     width: calc(100% - 60px);
   }
 

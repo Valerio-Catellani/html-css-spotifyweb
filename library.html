@@ -22,9 +22,8 @@
 <body id="library">
   <div id="app">
     <div id="main-content">
-      <header
-        class="bg-color-nav-background display-flex flex-direction-column justify-content-space-between overflow-hidden">
-        <div class="header-top">
+      <header class="bg-color-nav-background display-flex flex-direction-column overflow-hidden">
+        <div class="header-top display-flex flex-direction-column">
           <div id="logo">
             <img class="big-logo" src="resources/img/logo.svg" alt="Spotify logo">
             <img class="small-logo display-none" src="resources/img/logo-small.svg" alt="Spotify logo">
@@ -36,7 +35,7 @@
                   d="M448 463.746h-149.333v-149.333h-85.334v149.333h-149.333v-315.428l192-111.746 192 110.984v316.19z"
                   fill="" />
               </svg>
-              <span>home</span>
+              <span><a>home</a></span>
             </li>
             <li class="highlighted display-flex align-items-center ">
               <svg class="header-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +43,7 @@
                   d="M349.714 347.937l93.714 109.969-16.254 13.969-93.969-109.969q-48.508 36.825-109.207 36.825-36.826 0-70.476-14.349t-57.905-38.603-38.603-57.905-14.349-70.476 14.349-70.476 38.603-57.905 57.905-38.603 70.476-14.349 70.476 14.349 57.905 38.603 38.603 57.905 14.349 70.476q0 37.841-14.73 71.619t-40.889 58.921zM224 377.397q43.428 0 80.254-21.461t58.286-58.286 21.461-80.254-21.461-80.254-58.286-58.285-80.254-21.46-80.254 21.46-58.285 58.285-21.46 80.254 21.46 80.254 58.285 58.286 80.254 21.461z"
                   fill="" fill-rule="evenodd" />
               </svg>
-              <span>Cerca</span>
+              <span><a>Cerca</a></span>
             </li>
             <li class="highlighted display-flex align-items-center">
               <svg class="header-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -52,12 +51,12 @@
                   d="M291.301 81.778l166.349 373.587-19.301 8.635-166.349-373.587zM64 463.746v-384h21.334v384h-21.334zM192 463.746v-384h21.334v384h-21.334z"
                   fill="#ffffff" />
               </svg>
-              <span>la tua libreria</span>
+              <span><a href="library.html">la tua libreria</a></span>
             </li>
           </ul>
-          <div class="header-playlists">
+          <div class="header-playlists min-height-0 display-flex flex-direction-column">
             <h3 class="text-transform-uppercase text-color-primary">playlist</h3>
-            <ul>
+            <ul class="height-100x100 overflow-y-auto">
               <li class="display-flex align-items-center highlighted">
                 <div class="plus text-align-center">+</div>
                 <span>Crea playlist</span>
@@ -72,7 +71,7 @@
             </ul>
           </div>
         </div>
-        <div class="header-bottom">
+        <div class="header-bottom bg-color-nav-background">
           <div class="download display-flex align-items-center highlighted">
             <svg class="header-icon" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <title>Download icon</title>
@@ -98,6 +97,7 @@
         <div id="upgrade-banner" class=" display-flex align-items-center justify-content-flex-end">
           <h3 class="upgrade text-transform-uppercase pointer">effettual l'upgrade</h3>
         </div>
+
         <section id="active-song" class="display-flex align-items-flex-end">
           <div class="img-container">
             <img src="resources/img/metal_lifting.jpg" alt="metal lifiting song image">
@@ -117,19 +117,26 @@
               </h3>
             </div>
           </div>
-        </section>
-        <section id="playlist-command" class="display-flex align-items-center justify-content-space-between">
-          <div>
-            <i class="fa-solid fa-play pointer"></i>
-            <i class="fa-regular fa-heart pointer"></i>
-            <i class="fa-solid fa-ellipsis pointer"></i>
-          </div>
-          <div>
-            <span>Elenco</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </div>
+          <div class="song-animation">
 
+          </div>
         </section>
+
+        <section id="playlist-command" class="display-flex align-items-center justify-content-space-between">
+          <div class="display-flex align-items-center gap-20 justify-content-space-between font-size-em-300">
+            <div class="play-container">
+              <i class="fa-solid fa-play pointer font-size-rem-150 text-color-nav-background"></i>
+            </div>
+
+            <i class="fa-regular fa-heart pointer text-color-text-not-highlighted hover-text-color-primary"></i>
+            <i class="fa-solid fa-ellipsis text-color-text-not-highlighted hover-text-color-primary pointer"></i>
+          </div>
+          <div class="text-color-text-not-highlighted font-size-em-125 display-flex align-items-center gap-10">
+            <span class="">Elenco</span>
+            <i class="fa-solid fa-list pointer hover-text-color-primary"></i>
+          </div>
+        </section>
+
         <section id="active-playlist">
           <table class="width-100x100">
             <thead>
@@ -155,17 +162,44 @@
                   </div>
                   <div class="small-info">
                     <h4>Metal Lifting</h4>
-                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">Lucas Estrada</p>
                     &#44;
-                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">TWOPILOTES</p>
                   </div>
                 </td>
                 <td class="hover-underline pointer">Bloom</td>
                 <td class="text-color-text-not-highlighted">27 Novembre</td>
                 <td class="text-align-center">
-                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                   <span>2:59</span>
-                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
+                </td>
+              </tr>
+              <tr>
+                <td><span>1</span>
+                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
+                </td>
+                <td class="display-flex align-items-center">
+                  <div class="small-img-container">
+                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
+                  </div>
+                  <div class="small-info">
+                    <h4>Metal Lifting</h4>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">Lucas Estrada</p>
+                    &#44;
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">TWOPILOTES</p>
+                  </div>
+                </td>
+                <td class="hover-underline pointer">Bloom</td>
+                <td class="text-color-text-not-highlighted">27 Novembre</td>
+                <td class="text-align-center">
+                  <i
+                    class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
+                  <span>2:59</span>
+                  <i
+                    class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -178,17 +212,19 @@
                   </div>
                   <div class="small-info">
                     <h4>Metal Lifting</h4>
-                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">Lucas Estrada</p>
                     &#44;
-                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">TWOPILOTES</p>
                   </div>
                 </td>
                 <td class="hover-underline pointer">Bloom</td>
                 <td class="text-color-text-not-highlighted">27 Novembre</td>
                 <td class="text-align-center">
-                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                   <span>2:59</span>
-                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -201,17 +237,19 @@
                   </div>
                   <div class="small-info">
                     <h4>Metal Lifting</h4>
-                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">Lucas Estrada</p>
                     &#44;
-                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">TWOPILOTES</p>
                   </div>
                 </td>
                 <td class="hover-underline pointer">Bloom</td>
                 <td class="text-color-text-not-highlighted">27 Novembre</td>
                 <td class="text-align-center">
-                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                   <span>2:59</span>
-                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -224,17 +262,19 @@
                   </div>
                   <div class="small-info">
                     <h4>Metal Lifting</h4>
-                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">Lucas Estrada</p>
                     &#44;
-                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">TWOPILOTES</p>
                   </div>
                 </td>
                 <td class="hover-underline pointer">Bloom</td>
                 <td class="text-color-text-not-highlighted">27 Novembre</td>
                 <td class="text-align-center">
-                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                   <span>2:59</span>
-                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -247,17 +287,19 @@
                   </div>
                   <div class="small-info">
                     <h4>Metal Lifting</h4>
-                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">Lucas Estrada</p>
                     &#44;
-                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">TWOPILOTES</p>
                   </div>
                 </td>
                 <td class="hover-underline pointer">Bloom</td>
                 <td class="text-color-text-not-highlighted">27 Novembre</td>
                 <td class="text-align-center">
-                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                   <span>2:59</span>
-                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -270,17 +312,19 @@
                   </div>
                   <div class="small-info">
                     <h4>Metal Lifting</h4>
-                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">Lucas Estrada</p>
                     &#44;
-                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">TWOPILOTES</p>
                   </div>
                 </td>
                 <td class="hover-underline pointer">Bloom</td>
                 <td class="text-color-text-not-highlighted">27 Novembre</td>
                 <td class="text-align-center">
-                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                   <span>2:59</span>
-                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -293,17 +337,19 @@
                   </div>
                   <div class="small-info">
                     <h4>Metal Lifting</h4>
-                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">Lucas Estrada</p>
                     &#44;
-                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">TWOPILOTES</p>
                   </div>
                 </td>
                 <td class="hover-underline pointer">Bloom</td>
                 <td class="text-color-text-not-highlighted">27 Novembre</td>
                 <td class="text-align-center">
-                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                   <span>2:59</span>
-                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                 </td>
               </tr>
               <tr>
@@ -316,47 +362,24 @@
                   </div>
                   <div class="small-info">
                     <h4>Metal Lifting</h4>
-                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">Lucas Estrada</p>
                     &#44;
-                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
+                    <p class="hover-underline hover-text-color-primary pointer display-inline">TWOPILOTES</p>
                   </div>
                 </td>
                 <td class="hover-underline pointer">Bloom</td>
                 <td class="text-color-text-not-highlighted">27 Novembre</td>
                 <td class="text-align-center">
-                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                   <span>2:59</span>
-                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
-                </td>
-              </tr>
-              <tr>
-                <td><span>9</span>
-                  <i class="fa-solid fa-play display-none font-size-em-75 pointer"></i>
-                </td>
-                <td class="display-flex align-items-center">
-                  <div class="small-img-container">
-                    <img src="resources/img/metal_lifting.jpg" alt="metal song icon">
-                  </div>
-                  <div class="small-info">
-                    <h4>Metal Lifting</h4>
-                    <p class="hover-underline pointer display-inline">Lucas Estrada</p>
-                    &#44;
-                    <p class="hover-underline pointer display-inline">TWOPILOTES</p>
-                  </div>
-                </td>
-                <td class="hover-underline pointer">Bloom</td>
-                <td class="text-color-text-not-highlighted">27 Novembre</td>
-                <td class="text-align-center">
-                  <i class="fa-regular fa-heart pointer margin-right20 text-color-text-not-highlighted opacity-0 "></i>
-                  <span>2:59</span>
-                  <i class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 "></i>
+                  <i
+                    class="fa-solid fa-ellipsis pointer margin-left10 text-color-text-not-highlighted opacity-0 hover-text-color-primary"></i>
                 </td>
               </tr>
             </tbody>
-
           </table>
         </section>
-
       </div>
     </div>
 
